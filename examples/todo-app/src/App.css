@@ -1,0 +1,45 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main > * {
+  margin-top: 3em;
+}
+
+.todo-lists {
+  display: flex;
+  flex-direction: row;
+}
+
+.todo-list {
+  flex: 1 1 auto;
+  padding: 0 3em;
+  min-width: 10em;
+}
+
+.todo-incomplete-list header {
+  text-align: left;
+}
+
+.todo-complete-list header {
+  text-align: right;
+}
+
+.todo-list-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.vert-separator {
+  flex: 0 0 0;
+  border-right: 1px solid #e0e0df;
+  margin-top: 2em;
+  width: 0;
+}
+
+.todo.complete {
+  color: gray;
+  text-decoration: line-through;
+}

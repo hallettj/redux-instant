@@ -1,0 +1,29 @@
+{
+  "name": "redux-instant",
+  "version": "1.0.0",
+  "description": "Create type-safe Redux action creators and reducers with minimal boilerplate.",
+  "main": "lib/index.js",
+  "repository": "https://github.com/hallettj/redux-instant-action.git",
+  "author": "Jesse Hallett <jesse@sitr.us>",
+  "license": "MIT",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "pre-commit": "git-format-staged -f 'prettier --stdin --stdin-filepath \"{}\"' '*.ts' '*.js'",
+    "test": "jest"
+  },
+  "prettier": {
+    "semi": false
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.2",
+    "git-format-staged": "^2.1.0",
+    "husky": "^0.14.3",
+    "jest": "^23.6.0",
+    "prettier": "^1.14.2",
+    "redux": "^4.0.0",
+    "ts-jest": "^23.1.4",
+    "typescript": "^3.0.3"
+  }
+}
