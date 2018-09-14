@@ -79,7 +79,7 @@ function extractReducer<S, HM extends HandlerMap<S>>(
   return (state = getInitialState(), action) => {
     const type = removePrefix(nameSpace, action.type)
     const handler = handlers[type]
-    if (handler) {
+    if (type && handler) {
       return handler(state, action.payload)
     }
     return state
@@ -90,6 +90,8 @@ function applyPrefix(nameSpace: string, key: string): string {
   return nameSpace + "/" + key
 }
 
-function removePrefix(nameSpace: string, key: string): string {
-  return key.slice(nameSpace.length + 1)
+function removePrefix(nameSpace: string, key: string): string | undefined {
+  if (key.startsWith(nameSpace)) {
+    return key.slice(nameSpace.length + 1)
+  }
 }

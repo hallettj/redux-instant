@@ -52,3 +52,13 @@ it("produces a reducer that handles each action", () => {
     title: "Count Me"
   })
 })
+
+it("ignores actions with a type that does not match the given prefix", () => {
+  const otherActionType = "11chrprefix/increment"
+  expect(otherActionType.length).toBe(actionTypes.increment.length)
+  const state = reducer(initState, {
+    type: otherActionType,
+    payload: { delta: 1 }
+  })
+  expect(state.count).toBe(0)
+})
