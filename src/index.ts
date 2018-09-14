@@ -78,8 +78,8 @@ function extractReducer<S, HM extends HandlerMap<S>>(
 ): Redux.Reducer<S> {
   return (state = getInitialState(), action) => {
     const type = removePrefix(nameSpace, action.type)
-    const handler = handlers[type]
-    if (type && handler) {
+    const handler = type && handlers[type]
+    if (handler) {
       return handler(state, action.payload)
     }
     return state
