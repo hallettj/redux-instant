@@ -10,7 +10,7 @@
     "lib/**/*"
   ],
   "scripts": {
-    "pre-commit": "git-format-staged -f 'prettier --stdin --stdin-filepath \"{}\"' '*.ts' '*.js'",
+    "pre-commit": "git-format-staged -f 'prettier --stdin --stdin-filepath \"{}\"' '*.ts' '*.tsx' '*.js' '*.jsx'",
     "test": "jest"
   },
   "prettier": {
