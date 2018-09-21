@@ -1,6 +1,6 @@
 import { combineHandlers } from "./index"
 
-type State = { count: number, title: string }
+type State = { count: number; title: string }
 
 const initState: State = { count: 0, title: "Counter" }
 

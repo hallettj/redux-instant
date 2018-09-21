@@ -29,7 +29,7 @@
   },
   "scripts": {
     "commitmsg": "commitlint -e $GIT_PARAMS",
-    "pre-commit": "git-format-staged -f 'prettier --stdin --stdin-filepath \"{}\"' '*.ts' '*.tsx' '*.js' '*.jsx'",
+    "precommit": "git-format-staged -f 'prettier --stdin --stdin-filepath \"{}\"' '*.ts' '*.tsx' '*.js' '*.jsx'",
     "semantic-release": "semantic-release",
     "test": "jest"
   },
