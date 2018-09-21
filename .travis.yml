@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - "node"
+
+cache: yarn
+
+install:
+  - yarn install --frozen-lockfile
+
+script:
+  - yarn test
+
+jobs:
+  include:
+    - stage: release
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script: "yarn run semantic-release"
+        on:
+          all_branches: true
