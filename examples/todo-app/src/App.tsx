@@ -24,7 +24,6 @@ export function App(props: Props) {
       input.value = ""
     }
   }
-  // const todos = R.sortBy(todo => todo.complete, props.todos)
   const incomplete = props.todos.filter(todo => !todo.complete)
   const complete = props.todos.filter(todo => todo.complete)
   return (
