@@ -39,7 +39,7 @@
     "@commitlint/config-angular": "^8.3.4",
     "@types/jest": "^23.3.2",
     "git-format-staged": "^2.1.0",
-    "husky": "^0.14.3",
+    "husky": "^4.2.5",
     "jest": "^23.6.0",
     "prettier": "^1.14.2",
     "redux": "^4.0.0",
