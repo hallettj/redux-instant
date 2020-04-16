@@ -28,8 +28,6 @@
     "semi": false
   },
   "scripts": {
-    "commitmsg": "commitlint -e $GIT_PARAMS",
-    "precommit": "git-format-staged -f 'prettier --stdin --stdin-filepath \"{}\"' '*.ts' '*.tsx' '*.js' '*.jsx'",
     "prepublish": "tsc",
     "semantic-release": "semantic-release",
     "test": "jest"
@@ -46,5 +44,11 @@
     "semantic-release": "^15.9.16",
     "ts-jest": "^23.1.4",
     "typescript": "^3.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS",
+      "pre-commit": "git-format-staged -f 'prettier --stdin --stdin-filepath \"{}\"' '*.ts' '*.tsx' '*.js' '*.jsx'"
+    }
   }
 }
