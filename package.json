@@ -38,11 +38,11 @@
     "@types/jest": "^23.3.2",
     "git-format-staged": "^2.1.0",
     "husky": "^4.2.5",
-    "jest": "^23.6.0",
+    "jest": "^25.4.0",
     "prettier": "^1.14.2",
     "redux": "^4.0.0",
     "semantic-release": "^15.9.16",
-    "ts-jest": "^23.1.4",
+    "ts-jest": "^25.3.1",
     "typescript": "^3.0.3"
   },
   "husky": {
